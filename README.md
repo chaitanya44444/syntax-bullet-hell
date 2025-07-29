@@ -2,7 +2,7 @@
 
 A game made in godot 
 
-[Play here](https://xchaitanyax.itch.io/bullet-hell)
+https://xchaitanyax.itch.io/bullet-hell
 
 ---
 
@@ -23,6 +23,11 @@ A game made in godot
 - **2nd Place** – SYNTAX v9 Hackathon
 
 ---
+Screenshots
+https://img.itch.zone/aW1nLzIyMzg1NTk1LnBuZw==/original/ushbyM.png
+https://img.itch.zone/aW1hZ2UvMzc0NTg5Ni8yMjM4NTQ5My5wbmc=/794x1000/1oRYVe.png
+https://img.itch.zone/aW1hZ2UvMzc0NTg5Ni8yMjM4NTYwMC5wbmc=/794x1000/HEXOa4.png
+https://img.itch.zone/aW1hZ2UvMzc0NTg5Ni8yMjM4NTYwMS5wbmc=/794x1000/Y4fSLZ.png
 
 ## 📜 License
 
