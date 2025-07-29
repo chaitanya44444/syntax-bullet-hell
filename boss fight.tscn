@@ -1,0 +1,290 @@
+[gd_scene load_steps=25 format=4 uid="uid://b8g0572wsjvd4"]
+
+[ext_resource type="Script" uid="uid://bwburu3q76cxq" path="res://worldscrrip.gd" id="1_dmcob"]
+[ext_resource type="Texture2D" uid="uid://do4c2u67nttmg" path="res://tilesettttt.png" id="1_om1xv"]
+[ext_resource type="Texture2D" uid="uid://bold45fmtvkja" path="res://syntax assets/tiles/white.png" id="2_f0i4y"]
+[ext_resource type="PackedScene" uid="uid://bnlvw7h670ugb" path="res://player.tscn" id="2_jt8k5"]
+[ext_resource type="Script" uid="uid://bx7uihi8qm7th" path="res://mana.gd" id="3_781r1"]
+[ext_resource type="Texture2D" uid="uid://7syv4shu02wc" path="res://syntax assets/bars/progress/empty.png" id="4_dmcob"]
+[ext_resource type="Texture2D" uid="uid://c3ksqkmyeyywh" path="res://syntax assets/arena.png" id="4_drvrq"]
+[ext_resource type="Texture2D" uid="uid://byuo7y4xnyboq" path="res://syntax assets/bars/progress/full.png" id="5_drvrq"]
+[ext_resource type="PackedScene" uid="uid://bxvkols3ds25" path="res://boss.tscn" id="6_aodfv"]
+[ext_resource type="Script" uid="uid://cxtroyyhiv8wj" path="res://boss_health_bar.gd" id="6_om1xv"]
+[ext_resource type="Script" uid="uid://bfve0e32v1tew" path="res://playerhealth.gd" id="7_om1xv"]
+[ext_resource type="Texture2D" uid="uid://djci7c4mjijuh" path="res://syntax assets/bars/health/empty.png" id="10_r3mjy"]
+[ext_resource type="Texture2D" uid="uid://bmq0atyw4gv78" path="res://syntax assets/bars/health/full.png" id="11_kkftj"]
+[ext_resource type="Texture2D" uid="uid://cctake4l2sxp" path="res://syntax assets/bossfight.png" id="12_dmcob"]
+[ext_resource type="AudioStream" uid="uid://c3eni0m71ogcy" path="res://syntax game boss battle.mp3" id="14_t4vpw"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f0i4y"]
+texture = ExtResource("1_om1xv")
+texture_region_size = Vector2i(14, 14)
+0:4/0 = 0
+1:4/0 = 0
+1:5/0 = 0
+0:5/0 = 0
+0:1/next_alternative_id = 2
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/1 = 1
+0:1/1/modulate = Color(0.636235, 0.317982, 0.258159, 1)
+1:1/next_alternative_id = 2
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/1 = 1
+1:1/1/modulate = Color(0.636235, 0.317982, 0.258159, 1)
+1:0/next_alternative_id = 2
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/1 = 1
+0:0/next_alternative_id = 2
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:0/1 = 1
+0:0/1/modulate = Color(0.636235, 0.317982, 0.258159, 1)
+2:4/0 = 0
+2:5/0 = 0
+0:8/size_in_atlas = Vector2i(2, 2)
+0:8/next_alternative_id = 5
+0:8/0 = 0
+0:8/1 = 1
+0:8/1/modulate = Color(0, 0.929822, 0.832495, 1)
+0:8/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:8/2 = 2
+0:8/2/modulate = Color(0, 0, 0, 1)
+0:8/2/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:8/3 = 3
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/0 = 0
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/next_alternative_id = 3
+1:3/0 = 0
+1:3/1 = 1
+1:3/1/modulate = Color(1, 1, 0.611765, 1)
+1:3/2 = 2
+1:3/2/modulate = Color(0.636235, 0.317982, 0.258159, 1)
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+2:3/0 = 0
+2:2/0 = 0
+2:1/0 = 0
+2:0/0 = 0
+1:10/0 = 0
+1:11/0 = 0
+0:11/0 = 0
+0:10/0 = 0
+2:6/0 = 0
+2:7/0 = 0
+2:8/0 = 0
+2:9/0 = 0
+2:10/next_alternative_id = 2
+2:10/0 = 0
+2:10/1 = 1
+0:6/size_in_atlas = Vector2i(2, 2)
+0:6/next_alternative_id = 3
+0:6/0 = 0
+0:6/1 = 1
+0:6/1/modulate = Color(0, 0, 0, 1)
+0:6/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:6/2 = 2
+0:6/2/modulate = Color(1, 0.402871, 0.37415, 1)
+0:6/2/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fvwly"]
+texture = ExtResource("2_f0i4y")
+0:0/size_in_atlas = Vector2i(2, 2)
+0:0/next_alternative_id = 5
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/modulate = Color(0.261957, 0.227292, 0.0412265, 1)
+0:0/2 = 2
+0:0/2/modulate = Color(1.92523e-07, 0.334963, 0.326747, 1)
+0:0/3 = 3
+0:0/3/modulate = Color(0.828981, 0, 0.192652, 1)
+0:0/4 = 4
+
+[sub_resource type="TileSet" id="TileSet_fvwly"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_f0i4y")
+sources/1 = SubResource("TileSetAtlasSource_fvwly")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_t4vpw"]
+
+[sub_resource type="Animation" id="Animation_dmcob"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("afterdeath:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.0509804, 0.00392157, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_t4vpw"]
+resource_name = "afterdeathboss"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("afterdeath:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.88),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.0509804, 0.00392157, 0, 0), Color(0.0509804, 0.00392157, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_drvrq"]
+_data = {
+&"RESET": SubResource("Animation_dmcob"),
+&"afterdeathboss": SubResource("Animation_t4vpw")
+}
+
+[sub_resource type="Gradient" id="Gradient_v7e8e"]
+offsets = PackedFloat32Array(0, 0.138965)
+colors = PackedColorArray(0.399672, 0.000472211, 0.493835, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_om1xv"]
+gradient = SubResource("Gradient_v7e8e")
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_dmcob")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+light_mask = 0
+position = Vector2(-42.925, 0)
+tile_map_data = PackedByteArray("AAASABMAAAABAAEAAQASABIAAAABAAEAAQASABEAAAABAAEAAQASABAAAAABAAEAAQAVAAsAAAABAAEAAQAWAAsAAAABAAEAAQAXAAoAAAABAAEAAQA3AA8AAAABAAEAAQA2AA8AAAABAAEAAQA2ABAAAAABAAEAAQA1ABAAAAABAAEAAQA1ABEAAAABAAEAAQA0ABEAAAABAAEAAQA0ABIAAAABAAEAAQAzABIAAAABAAEAAQArABcAAAABAAEAAQArABgAAAABAAEAAQAqABgAAAABAAEAAQApABgAAAABAAEAAQAoABgAAAABAAEAAQAoABkAAAABAAEAAQAxABgAAAABAAEAAQAyABgAAAABAAEAAQAyABkAAAABAAEAAQAzABkAAAABAAEAAQA4ABgAAAABAAEAAQA4ABkAAAABAAEAAQA3ABkAAAABAAEAAQAgABoAAAABAAEAAQAfABoAAAABAAEAAQAeABoAAAABAAEAAQASABcAAAABAAEAAQASABYAAAABAAEAAQAaABEAAAABAAEAAQAaABQAAAABAAEAAQAcABcAAAABAAEAAQA0AB4AAAABAAEAAQA0AB8AAAABAAEAAQApACEAAAABAAEAAQApACIAAAABAAEAAQAoACIAAAABAAEAAQAnACIAAAABAAEAAQAmACIAAAABAAEAAQAbACAAAAABAAEAAQAaACAAAAABAAEAAQAaAB8AAAABAAEAAQASAB4AAAAAAAgAAgASAB0AAAAAAAgAAgARAB0AAAAAAAgAAgARABwAAAAAAAgAAgAQABwAAAAAAAgAAgAQABsAAAAAAAgAAgAQABoAAAAAAAgAAgAPABoAAAAAAAgAAgAPABkAAAAAAAgAAgAPABgAAAAAAAgAAgAPABcAAAAAAAgAAgAPABYAAAAAAAgAAgAOABYAAAAAAAgAAgAOABUAAAAAAAgAAgAOABQAAAAAAAgAAgAOABMAAAAAAAgAAgAOABIAAAAAAAgAAgAjAAEAAAAAAAgAAgAiAAEAAAAAAAgAAgAhAAEAAAAAAAgAAgAhAAIAAAAAAAgAAgAgAAIAAAAAAAgAAgAfAAIAAAAAAAgAAgAeAAIAAAAAAAgAAgAdAAIAAAAAAAgAAgAdAAMAAAAAAAgAAgAcAAMAAAAAAAgAAgAbAAMAAAAAAAgAAgAbAAQAAAAAAAgAAgAaAAQAAAAAAAgAAgAZAAQAAAAAAAgAAgAZAAUAAAAAAAgAAgAYAAUAAAAAAAgAAgAXAAYAAAAAAAgAAgAWAAYAAAAAAAgAAgAWAAcAAAAAAAgAAgAVAAcAAAAAAAgAAgAUAAcAAAAAAAgAAgATAAcAAAAAAAgAAgATAAgAAAAAAAgAAgASAAgAAAAAAAgAAgASAAkAAAAAAAgAAgARAAkAAAAAAAgAAgARAAoAAAAAAAgAAgAQAAoAAAAAAAgAAgAQAAsAAAAAAAgAAgAQAAwAAAAAAAgAAgAPAAwAAAAAAAgAAgAPAA0AAAAAAAgAAgAOAA0AAAAAAAgAAgAOAA4AAAAAAAgAAgAOAA8AAAAAAAgAAgAOABAAAAAAAAgAAgAkAAEAAAAAAAgAAgAlAAEAAAAAAAgAAgAmAAEAAAAAAAgAAgAnAAEAAAAAAAgAAgAoAAEAAAAAAAgAAgApAAEAAAAAAAgAAgAqAAEAAAAAAAgAAgArAAEAAAAAAAgAAgAsAAEAAAAAAAgAAgAtAAEAAAAAAAgAAgAuAAIAAAAAAAgAAgAvAAIAAAAAAAgAAgAwAAIAAAAAAAgAAgAxAAIAAAAAAAgAAgAxAAMAAAAAAAgAAgAyAAMAAAAAAAgAAgAzAAMAAAAAAAgAAgA0AAMAAAAAAAgAAgA0AAQAAAAAAAgAAgA1AAQAAAAAAAgAAgA1AAUAAAAAAAgAAgA2AAUAAAAAAAgAAgA2AAYAAAAAAAgAAgA3AAYAAAAAAAgAAgA3AAcAAAAAAAgAAgA4AAcAAAAAAAgAAgA5AAcAAAAAAAgAAgA5AAgAAAAAAAgAAgA6AAgAAAAAAAgAAgA6AAkAAAAAAAgAAgA7AAkAAAAAAAgAAgA7AAoAAAAAAAgAAgA8AAoAAAAAAAgAAgA8AAsAAAAAAAgAAgA8AAwAAAAAAAgAAgA9AAwAAAAAAAgAAgA9AA0AAAAAAAgAAgA9AA4AAAAAAAgAAgA9AA8AAAAAAAgAAgA+AA8AAAAAAAgAAgA+ABAAAAAAAAgAAgA+ABEAAAAAAAgAAgA/ABEAAAAAAAgAAgA/ABIAAAAAAAgAAgA/ABMAAAAAAAgAAgA/ABQAAAAAAAgAAgA/ABUAAAAAAAgAAgA/ABYAAAAAAAgAAgA/ABcAAAAAAAgAAgA/ABgAAAAAAAgAAgA+ABgAAAAAAAgAAgA+ABkAAAAAAAgAAgA+ABoAAAAAAAgAAgA+ABsAAAAAAAgAAgA+ABwAAAAAAAgAAgA+AB0AAAAAAAgAAgA9AB0AAAAAAAgAAgA9AB4AAAAAAAgAAgA9ABwAAAAAAAgAAgA9ABsAAAAAAAgAAgA8AB4AAAAAAAgAAgA8AB8AAAAAAAgAAgA7AB8AAAAAAAgAAgA7ACAAAAAAAAgAAgA7ACEAAAAAAAgAAgA6ACEAAAAAAAgAAgA6ACIAAAAAAAgAAgA5ACIAAAAAAAgAAgA5ACMAAAAAAAgAAgA4ACMAAAAAAAgAAgA4ACIAAAAAAAgAAgA5ACEAAAAAAAgAAgA5ACAAAAAAAAgAAgA6ACAAAAAAAAgAAgA3ACIAAAAAAAgAAgA3ACMAAAAAAAgAAgA2ACMAAAAAAAgAAgA1ACMAAAAAAAgAAgA1ACQAAAAAAAgAAgA0ACQAAAAAAAgAAgA0ACUAAAAAAAgAAgAzACUAAAAAAAgAAgAyACYAAAAAAAgAAgAxACYAAAAAAAgAAgAwACYAAAAAAAgAAgAvACYAAAAAAAgAAgAuACYAAAAAAAgAAgAuACcAAAAAAAgAAgAtACcAAAAAAAgAAgAsACcAAAAAAAgAAgArACcAAAAAAAgAAgAqACcAAAAAAAgAAgApACcAAAAAAAgAAgAoACcAAAAAAAgAAgAnACcAAAAAAAgAAgAmACcAAAAAAAgAAgAlACcAAAAAAAgAAgAkACcAAAAAAAgAAgAjACcAAAAAAAgAAgAiACcAAAAAAAgAAgAhACcAAAAAAAgAAgAgACcAAAAAAAgAAgAfACcAAAAAAAgAAgAeACcAAAAAAAgAAgAeACYAAAAAAAgAAgAdACYAAAAAAAgAAgAdACUAAAAAAAgAAgAcACUAAAAAAAgAAgAbACUAAAAAAAgAAgAbACQAAAAAAAgAAgAaACQAAAAAAAgAAgAZACQAAAAAAAgAAgAZACMAAAAAAAgAAgAYACMAAAAAAAgAAgAXACMAAAAAAAgAAgAWACMAAAAAAAgAAgAWACIAAAAAAAgAAgAVACIAAAAAAAgAAgAVACEAAAAAAAgAAgAUACEAAAAAAAgAAgAUACAAAAAAAAgAAgATACAAAAAAAAgAAgATAB8AAAAAAAgAAgA=")
+tile_set = SubResource("TileSet_fvwly")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(579, 301.5)
+scale = Vector2(3.42, 3.33667)
+texture = ExtResource("4_drvrq")
+
+[node name="TileMap" type="Node" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="mana" type="ProgressBar" parent="CanvasLayer"]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -125.0
+offset_bottom = 68.0
+grow_horizontal = 0
+
+[node name="manabar" type="TextureProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("player")]
+anchors_preset = -1
+anchor_left = 0.0286458
+anchor_right = 0.286458
+anchor_bottom = 0.186728
+nine_patch_stretch = true
+stretch_margin_left = 4
+stretch_margin_top = 4
+stretch_margin_right = 4
+stretch_margin_bottom = 4
+texture_under = ExtResource("4_dmcob")
+texture_progress = ExtResource("5_drvrq")
+script = ExtResource("3_781r1")
+player = NodePath("../../player")
+metadata/_edit_use_anchors_ = true
+
+[node name="boss health bar" type="TextureProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("boss")]
+anchors_preset = -1
+anchor_left = 0.158854
+anchor_top = 0.719136
+anchor_right = 0.863715
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+value = 100.0
+nine_patch_stretch = true
+stretch_margin_top = 5
+stretch_margin_bottom = 5
+texture_under = ExtResource("10_r3mjy")
+texture_progress = ExtResource("11_kkftj")
+script = ExtResource("6_om1xv")
+boss = NodePath("../../boss")
+metadata/_edit_use_anchors_ = true
+
+[node name="playerhealth" type="TextureProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("player")]
+anchors_preset = -1
+anchor_left = 0.710938
+anchor_right = 0.978299
+anchor_bottom = 0.16358
+grow_horizontal = 0
+value = 20.0
+fill_mode = 1
+nine_patch_stretch = true
+stretch_margin_left = 4
+stretch_margin_top = 4
+stretch_margin_right = 4
+stretch_margin_bottom = 4
+texture_under = ExtResource("4_dmcob")
+texture_progress = ExtResource("5_drvrq")
+script = ExtResource("7_om1xv")
+player = NodePath("../../player")
+metadata/_edit_use_anchors_ = true
+
+[node name="afterdeath" type="TextureRect" parent="CanvasLayer"]
+modulate = Color(0.0509804, 0.00392157, 0, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_t4vpw")
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+libraries = {
+&"": SubResource("AnimationLibrary_drvrq")
+}
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 0.1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(626.5, 459)
+scale = Vector2(5.22333, 4.17333)
+texture = ExtResource("12_dmcob")
+
+[node name="player" parent="." instance=ExtResource("2_jt8k5")]
+position = Vector2(416.935, 246)
+scale = Vector2(0.345, 0.345)
+
+[node name="boss" parent="." instance=ExtResource("6_aodfv")]
+position = Vector2(577.895, 283.465)
+scale = Vector2(1.085, 1.085)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+show_behind_parent = true
+position = Vector2(-8441, 580)
+scale = Vector2(338.5, 124.5)
+texture = SubResource("GradientTexture2D_om1xv")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.743977, 0.743977, 3.85046e-07, 1)
+energy = 1.65
+shadow_color = Color(0, 0, 0, 1)
+height = 1.0
+max_distance = 8125.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_t4vpw")
+volume_db = 15.0
+autoplay = true
